@@ -77,7 +77,12 @@ export const ExperienceSection = () => {
                       {job.description.map((item, descIndex) => (
                         <li key={descIndex} className="flex items-start space-x-3">
                           <span className="text-primary mt-2 text-sm">▹</span>
-                          <span className="text-body">{item}</span>
+                          <span className="text-body" dangerouslySetInnerHTML={{ 
+                            __html: item.replace(
+                              /uiuc\.chat/g, 
+                              '<a href="https://uiuc.chat" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-glow transition-colors">uiuc.chat</a>'
+                            )
+                          }} />
                         </li>
                       ))}
                     </ul>
