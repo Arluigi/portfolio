@@ -47,7 +47,7 @@ export const PortfolioLayout = ({ children }: PortfolioLayoutProps) => {
       <header className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-muted">
         <div className="flex items-center justify-between px-6 py-4">
           <a href="#hero" className="text-heading-sm text-primary font-mono">
-            BC
+            AS
           </a>
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
