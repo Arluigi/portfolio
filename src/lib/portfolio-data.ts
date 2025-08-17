@@ -174,7 +174,7 @@ export const portfolioData = {
       featured: true
     },
     {
-      title: "IMPACT Tool - Research & Grant Discovery",
+      title: "IMPACT Tool",
       description: "LLM-powered platform that intelligently matches researchers with relevant grants and collaborators based on their expertise and interests. Analyzes research papers, grant proposals, and researcher profiles to create intelligent recommendations, streamlining the research funding process for academic institutions.",
       technologies: ["Python", "LangChain", "Vector DB", "FastAPI", "React", "PostgreSQL"],
       github: "",

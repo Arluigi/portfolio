@@ -19,18 +19,18 @@ export const ExperienceSection = () => {
         <div className="grid lg:grid-cols-4 gap-8">
           {/* Tab Navigation */}
           <div className="lg:col-span-1">
-            <div className="flex lg:flex-col overflow-x-auto lg:overflow-visible -mx-6 px-6 lg:mx-0 lg:px-0">
+            <div className="flex lg:flex-col overflow-x-auto lg:overflow-visible scrollbar-hide lg:mx-0 lg:px-0">
               {experience.map((job, index) => (
                 <button
                   key={job.company}
                   onClick={() => setActiveTab(index)}
-                  className={`flex-shrink-0 px-4 py-3 text-left border-b-2 lg:border-b-0 lg:border-l-2 transition-all duration-300 whitespace-nowrap lg:whitespace-normal ${
+                  className={`flex-shrink-0 px-3 py-2 lg:px-4 lg:py-3 text-left border-b-2 lg:border-b-0 lg:border-l-2 transition-all duration-300 whitespace-nowrap lg:whitespace-normal ${
                     activeTab === index
                       ? 'border-primary text-primary bg-primary/5'
                       : 'border-muted text-muted-foreground hover:border-primary hover:text-primary hover:bg-primary/5'
                   }`}
                 >
-                  <span className="text-sm font-medium">{job.company}</span>
+                  <span className="text-xs lg:text-sm font-medium">{job.company}</span>
                 </button>
               ))}
             </div>
@@ -51,36 +51,36 @@ export const ExperienceSection = () => {
                   <div className="space-y-6">
                     {/* Job Title & Company */}
                     <div>
-                      <h3 className="text-heading-sm mb-1">
-                        {job.position}
+                      <h3 className="text-heading-sm mb-1 break-words">
+                        <span className="block sm:inline">{job.position}</span>
                         {job.url && (
                           <a
                             href={job.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center ml-2 text-primary hover:text-primary-glow transition-colors"
+                            className="inline-flex items-center mt-1 sm:mt-0 sm:ml-2 text-primary hover:text-primary-glow transition-colors"
                           >
                             @ {job.company}
-                            <ExternalLink size={16} className="ml-1" />
+                            <ExternalLink size={16} className="ml-1 flex-shrink-0" />
                           </a>
                         )}
                         {!job.url && (
-                          <span className="text-primary"> @ {job.company}</span>
+                          <span className="text-primary block sm:inline"> @ {job.company}</span>
                         )}
                       </h3>
-                      <p className="text-body-sm">{job.duration}</p>
-                      <p className="text-body-sm text-muted-foreground">{job.location}</p>
+                      <p className="text-body-sm break-words">{job.duration}</p>
+                      <p className="text-body-sm text-muted-foreground break-words">{job.location}</p>
                     </div>
                     
                     {/* Job Description */}
                     <ul className="space-y-4">
                       {job.description.map((item, descIndex) => (
                         <li key={descIndex} className="flex items-start space-x-3">
-                          <span className="text-primary mt-2 text-sm">▹</span>
-                          <span className="text-body" dangerouslySetInnerHTML={{ 
+                          <span className="text-primary mt-2 text-sm flex-shrink-0">▹</span>
+                          <span className="text-body break-words" dangerouslySetInnerHTML={{ 
                             __html: item.replace(
                               /uiuc\.chat/g, 
-                              '<a href="https://uiuc.chat" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-glow transition-colors">uiuc.chat</a>'
+                              '<a href="https://uiuc.chat" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-glow transition-colors break-all">uiuc.chat</a>'
                             )
                           }} />
                         </li>

@@ -1,4 +1,5 @@
 import { portfolioData } from '@/lib/portfolio-data';
+import { X } from 'lucide-react';
 
 interface MobileNavigationProps {
   isOpen: boolean;
@@ -25,9 +26,18 @@ export const MobileNavigation = ({ isOpen, onClose, activeSection }: MobileNavig
         onClick={onClose}
       />
       
+      {/* Close Button */}
+      <button
+        onClick={onClose}
+        className="absolute top-6 right-6 p-2 text-foreground hover:text-primary transition-colors z-10"
+        aria-label="Close menu"
+      >
+        <X size={24} />
+      </button>
+      
       {/* Menu Content */}
       <div className="relative h-full flex flex-col items-center justify-center">
-        <nav className="space-y-8">
+        <nav className="space-y-8 text-center">
           {portfolioData.navigation.map((item, index) => {
             const sectionId = item.href.substring(1);
             const isActive = activeSection === sectionId;
@@ -55,7 +65,7 @@ export const MobileNavigation = ({ isOpen, onClose, activeSection }: MobileNavig
         </nav>
         
         {/* Resume Button */}
-        <div className="mt-12">
+        <div className="mt-12 text-center">
           <a
             href={portfolioData.hero.resumeUrl}
             target="_blank"
