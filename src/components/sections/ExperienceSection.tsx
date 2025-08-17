@@ -37,7 +37,7 @@ export const ExperienceSection = () => {
           </div>
           
           {/* Tab Content */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-3 overflow-hidden">
             {experience.map((job, index) => (
               <div
                 key={job.company}
@@ -48,10 +48,10 @@ export const ExperienceSection = () => {
                 }`}
               >
                 {activeTab === index && (
-                  <div className="space-y-6">
+                  <div className="space-y-4 px-2 sm:px-0">
                     {/* Job Title & Company */}
                     <div>
-                      <h3 className="text-heading-sm mb-1 break-words">
+                      <h3 className="text-lg sm:text-xl font-semibold mb-1 break-words leading-tight">
                         <span className="block sm:inline">{job.position}</span>
                         {job.url && (
                           <a
@@ -61,23 +61,23 @@ export const ExperienceSection = () => {
                             className="inline-flex items-center mt-1 sm:mt-0 sm:ml-2 text-primary hover:text-primary-glow transition-colors"
                           >
                             @ {job.company}
-                            <ExternalLink size={16} className="ml-1 flex-shrink-0" />
+                            <ExternalLink size={14} className="ml-1 flex-shrink-0" />
                           </a>
                         )}
                         {!job.url && (
                           <span className="text-primary block sm:inline"> @ {job.company}</span>
                         )}
                       </h3>
-                      <p className="text-body-sm break-words">{job.duration}</p>
-                      <p className="text-body-sm text-muted-foreground break-words">{job.location}</p>
+                      <p className="text-sm break-words">{job.duration}</p>
+                      <p className="text-sm text-muted-foreground break-words">{job.location}</p>
                     </div>
                     
                     {/* Job Description */}
-                    <ul className="space-y-4">
+                    <ul className="space-y-2">
                       {job.description.map((item, descIndex) => (
-                        <li key={descIndex} className="flex items-start space-x-3">
-                          <span className="text-primary mt-2 text-sm flex-shrink-0">▹</span>
-                          <span className="text-body break-words" dangerouslySetInnerHTML={{ 
+                        <li key={descIndex} className="flex items-start space-x-2">
+                          <span className="text-primary mt-1 text-xs flex-shrink-0">▹</span>
+                          <span className="text-sm leading-relaxed break-words" dangerouslySetInnerHTML={{ 
                             __html: item.replace(
                               /uiuc\.chat/g, 
                               '<a href="https://uiuc.chat" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-glow transition-colors break-all">uiuc.chat</a>'
@@ -88,9 +88,9 @@ export const ExperienceSection = () => {
                     </ul>
                     
                     {/* Technologies */}
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-1">
                       {job.technologies.map((tech) => (
-                        <span key={tech} className="tech-badge">
+                        <span key={tech} className="inline-flex items-center px-2 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full border border-primary/20">
                           {tech}
                         </span>
                       ))}

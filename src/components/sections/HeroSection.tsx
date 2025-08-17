@@ -4,7 +4,7 @@ export const HeroSection = () => {
   const { hero } = portfolioData;
 
   return (
-    <section id="hero" className="section-padding min-h-screen flex items-center pt-20 lg:pt-16">
+    <section id="hero" className="section-padding min-h-screen flex items-center pt-24 lg:pt-16 px-8 sm:px-6">
       <div className="max-w-4xl">
         {/* Greeting */}
         <p className="text-primary font-mono text-base md:text-lg mb-4 fade-in-up">
