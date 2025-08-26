@@ -161,7 +161,7 @@ export const portfolioData = {
       technologies: ["Next.js", "Python", "TensorFlow", "PostgreSQL", "Stripe API"],
       github: "",
       external: "",
-      image: "/projects/spotify-course.jpg",
+      image: "/projects/clearaf.png",
       featured: true
     },
     {
@@ -170,7 +170,7 @@ export const portfolioData = {
       technologies: ["React", "Node.js", "Web Scraping", "PostgreSQL", "SendGrid"],
       github: "https://github.com/arluigi/",
       external: "https://uiucjobs.com",
-      image: "/projects/spotify-profile.jpg",
+      image: "/projects/uiucjobs.png",
       featured: true
     },
     {
@@ -179,7 +179,7 @@ export const portfolioData = {
       technologies: ["Python", "LangChain", "Vector DB", "FastAPI", "React", "PostgreSQL"],
       github: "",
       external: "https://dpi.uillinois.edu/",
-      image: "/projects/halcyon-theme.jpg",
+      image: "/projects/impact.png",
       featured: true
     }
   ],
