@@ -148,7 +148,7 @@ export const portfolioData = {
         "Developed curriculum covering Python, JavaScript, and web development fundamentals",
         "Donated all profits to local charities, raising over $10,000 for community organizations"
       ],
-      technologies: ["Python", "JavaScript", "HTML/CSS", "Scratch", "Education"],
+      technologies: ["Python", "JavaScript", "Scratch", "Education"],
       url: ""
     }
   ],
@@ -165,11 +165,11 @@ export const portfolioData = {
       featured: true
     },
     {
-      title: "uiuc.jobs",
+      title: "uiucjobs.com",
       description: "Real-time dashboard for UIUC students that scrapes the OSFA job board to surface the latest positions. Features built-in email alerts, live monitoring, and intelligent job matching based on student profiles and preferences.",
       technologies: ["React", "Node.js", "Web Scraping", "PostgreSQL", "SendGrid"],
       github: "https://github.com/arluigi/",
-      external: "https://uiuc.jobs",
+      external: "https://uiucjobs.com",
       image: "/projects/spotify-profile.jpg",
       featured: true
     },
