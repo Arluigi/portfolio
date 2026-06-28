@@ -74,30 +74,55 @@ export const portfolioData = {
   // Experience Section
   experience: [
     {
-      company: "Cannabis Research Institute",
-      position: "Molecular Biology Research Intern",
-      duration: "Jun 2025 — Present",
+      company: "Center for Quantitative Cell Biology (NSF STC)",
+      position: "Villa Cisse Scholar",
+      duration: "Summer 2026",
       location: "University of Illinois",
       description: [
-        "Perform molecular biology techniques including DNA/RNA precipitation, RT-qPCR viral detection and genotyping",
-        "Analyze experimental data and contribute to protocol optimization for cutting-edge cannabis research",
-        "Conduct protein structure prediction and functional analysis of terpene synthase enzymes using AlphaFold, Rosetta, and PyMol"
+        "Selected as one of four Villa Cisse Scholars, a competitive 10-week program providing intensive training in quantitative biophysics and mentoring",
+        "Supports an immersive summer research experience in the K.V. Prasanth Lab, accelerating my quantitative cell biology research and preparation for a career in biology"
       ],
-      technologies: ["RT-qPCR", "AlphaFold", "PyMol", "Rosetta", "RNA extraction"],
-      url: "https://illinois.edu/"
+      technologies: ["Quantitative Biophysics", "Quantitative Cell Biology", "Research"],
+      url: "https://qcb.illinois.edu/"
+    },
+    {
+      company: "K.V. Prasanth Lab",
+      position: "Research Assistant",
+      duration: "Oct 2025 — Present",
+      location: "University of Illinois",
+      description: [
+        "Conduct wet lab validation of computational candidates via RNA extraction, RT-qPCR, and downstream analysis on hypoxia- and chemotherapy-treated cell panels, owning plate setup, quality control, and troubleshooting",
+        "Curate candidate gene lists from RNA-seq datasets in breast cancer cell line and patient-derived models, validating transcript isoforms and identifying alternative promoter usage under cellular stress",
+        "Contribute deliverables to ongoing collaborations, including with the National Cancer Institute"
+      ],
+      technologies: ["RNA extraction", "RT-qPCR", "RNA-seq", "Genotyping", "Gel electrophoresis"],
+      url: "https://mcb.illinois.edu/"
     },
     {
       company: "Center for AI Innovation (NCSA)",
       position: "AI Development Intern",
-      duration: "May 2025 — Present",
+      duration: "May 2025 — Oct 2025",
       location: "University of Illinois",
       description: [
-        "Developing uiuc.chat, an AI-powered course assistant integrated with Canvas LMS for real-time, course-specific support",
-        "Designing and optimizing NLP tools to improve user interaction and knowledge retrieval",
-        "Building scalable solutions to enhance educational experiences across the university"
+        "Developed uiuc.chat, an AI-powered course assistant integrated with Canvas LMS for real-time, course-specific support",
+        "Designed and optimized NLP tools to improve user interaction and knowledge retrieval",
+        "Built scalable solutions to enhance educational experiences across the university"
       ],
       technologies: ["Python", "NLP", "LLM Development", "Canvas API", "React"],
       url: "https://www.ncsa.illinois.edu/"
+    },
+    {
+      company: "Cannabis Research Institute",
+      position: "Molecular Biology Research Intern",
+      duration: "Jun 2025 — Aug 2025",
+      location: "Chicago, IL",
+      description: [
+        "Performed molecular biology techniques including DNA/RNA precipitation, RT-qPCR viral detection and genotyping",
+        "Analyzed experimental data and contributed to protocol optimization for cutting-edge cannabis research",
+        "Conducted protein structure prediction and functional analysis of terpene synthase enzymes using AlphaFold, Rosetta, and PyMol"
+      ],
+      technologies: ["RT-qPCR", "AlphaFold", "PyMol", "Rosetta", "RNA extraction"],
+      url: "https://illinois.edu/"
     },
     {
       company: "Discovery Partners Institute",
@@ -156,21 +181,21 @@ export const portfolioData = {
   // Featured Projects
   projects: [
     {
+      title: "Athen.ai",
+      description: "Healthcare-focused platform that helps clinics discover the right AI tools for their workflows, with step-by-step setup guides and custom assistants trained on their own documents. Features an AI chat consultant that recommends tools inline, plus a PHI de-identification pipeline (Azure Health Data Services) that strips patient identifiers before any document reaches the vector store.",
+      technologies: ["React", "TypeScript", "Node.js", "OpenAI API", "Azure Health Data Services", "Vercel"],
+      github: "",
+      external: "https://athen-ai-orcin.vercel.app/",
+      image: "/projects/athena.png",
+      featured: true
+    },
+    {
       title: "ClearAF",
       description: "Comprehensive telehealth platform connecting patients and dermatologists, centered around AI-powered skin analysis. Features personalized prescription plans based on individual skin conditions and treatment history, leveraging computer vision and LLMs for accurate diagnosis support.",
       technologies: ["Next.js", "Python", "TensorFlow", "PostgreSQL", "Stripe API"],
       github: "",
       external: "",
       image: "/projects/clearaf.png",
-      featured: true
-    },
-    {
-      title: "uiucjobs.com",
-      description: "Real-time dashboard for UIUC students that scrapes the OSFA job board to surface the latest positions. Features built-in email alerts, live monitoring, and intelligent job matching based on student profiles and preferences.",
-      technologies: ["React", "Node.js", "Web Scraping", "PostgreSQL", "SendGrid"],
-      github: "https://github.com/arluigi/",
-      external: "https://uiucjobs.com",
-      image: "/projects/uiucjobs.png",
       featured: true
     },
     {
