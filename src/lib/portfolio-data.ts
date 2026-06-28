@@ -9,6 +9,12 @@ export interface Experience {
   description: string[];
   technologies: string[];
   url?: string;
+  highlight?: {
+    label: string;
+    title: string;
+    description: string;
+    url?: string;
+  };
 }
 
 export interface Project {
@@ -74,18 +80,6 @@ export const portfolioData = {
   // Experience Section
   experience: [
     {
-      company: "Center for Quantitative Cell Biology (NSF STC)",
-      position: "Villa Cisse Scholar",
-      duration: "Summer 2026",
-      location: "University of Illinois",
-      description: [
-        "Selected as one of four Villa Cisse Scholars, a competitive 10-week program providing intensive training in quantitative biophysics and mentoring",
-        "Supports an immersive summer research experience in the K.V. Prasanth Lab, accelerating my quantitative cell biology research and preparation for a career in biology"
-      ],
-      technologies: ["Quantitative Biophysics", "Quantitative Cell Biology", "Research"],
-      url: "https://qcb.illinois.edu/"
-    },
-    {
       company: "K.V. Prasanth Lab",
       position: "Research Assistant",
       duration: "Oct 2025 — Present",
@@ -96,7 +90,13 @@ export const portfolioData = {
         "Contribute deliverables to ongoing collaborations, including with the National Cancer Institute"
       ],
       technologies: ["RNA extraction", "RT-qPCR", "RNA-seq", "Genotyping", "Gel electrophoresis"],
-      url: "https://mcb.illinois.edu/"
+      url: "https://mcb.illinois.edu/",
+      highlight: {
+        label: "Villa Cisse Scholarship · Summer 2026",
+        title: "Villa Cisse Scholar",
+        description: "Selected as one of four Villa Cisse Scholars — a competitive 10-week program providing intensive training in quantitative biophysics and mentoring — funding an immersive summer research experience in the lab.",
+        url: "https://qcb.illinois.edu/"
+      }
     },
     {
       company: "Center for AI Innovation (NCSA)",
