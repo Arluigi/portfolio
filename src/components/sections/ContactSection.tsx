@@ -4,7 +4,7 @@ export const ContactSection = () => {
   const { contact } = portfolioData;
 
   return (
-    <section id="contact" className="section-padding">
+    <section id="contact" className="section-padding min-h-screen flex items-center justify-center">
       <div className="max-w-2xl mx-auto text-center">
         {/* Section Number */}
         <p className="text-primary font-mono text-lg mb-4 fade-in-up">

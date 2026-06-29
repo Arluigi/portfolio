@@ -52,9 +52,9 @@ export const portfolioData = {
   // About Section
   about: {
     description: [
-      "Hello! I'm Aryan, and I enjoy building innovative solutions at the intersection of AI, biology, and technology. My journey started with co-founding CodifyKids in 2018, where I taught coding to middle and high school students while raising funds for charity.",
-      "Fast-forward to today, and I've had the privilege of working on cutting-edge projects at the Cannabis Research Institute, NCSA's Center for AI Innovation, and various startups. My main focus these days is developing AI-powered tools for research and healthcare applications.",
-      "Currently, I'm working on ClearAF, a comprehensive telehealth platform that leverages AI for personalized dermatological care, while conducting molecular biology research on terpene synthase enzymes.",
+      "Hello! I'm Aryan, a Molecular & Cellular Biology student at the University of Illinois who loves building at the intersection of biology, AI, and healthcare. My journey started back in 2018 when I co-founded CodifyKids, teaching coding to middle and high school students while donating the proceeds to charity.",
+      "Since then I've split my time between the wet lab and the codebase. I currently do research in the K.V. Prasanth Lab, validating RNA biology and gene regulation under cellular stress in breast cancer models — work that feeds into collaborations including with the National Cancer Institute. I was recently named a Villa Cisse Scholar, supporting an immersive summer of quantitative biophysics research.",
+      "On the building side, I've developed AI tools at NCSA's Center for AI Innovation and Discovery Partners Institute. These days I'm focused on Athen.ai, a platform that helps clinics adopt AI tools safely, and ClearAF, an AI-powered telehealth platform for dermatology.",
       "Here are a few technologies I've been working with recently:"
     ],
     technologies: {

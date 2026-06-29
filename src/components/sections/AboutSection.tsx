@@ -21,10 +21,12 @@ export const AboutSection = () => {
               // Add hyperlinks to specific terms
               const linkedParagraph = paragraph
                 .replace(/CodifyKids/g, '<a href="https://github.com/aryansachdev" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-glow transition-colors">CodifyKids</a>')
-                .replace(/Cannabis Research Institute/g, '<a href="https://illinois.edu/" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-glow transition-colors">Cannabis Research Institute</a>')
+                .replace(/K\.V\. Prasanth Lab/g, '<a href="https://mcb.illinois.edu/" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-glow transition-colors">K.V. Prasanth Lab</a>')
+                .replace(/National Cancer Institute/g, '<a href="https://www.cancer.gov/" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-glow transition-colors">National Cancer Institute</a>')
+                .replace(/Villa Cisse Scholar/g, '<a href="https://qcb.illinois.edu/" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-glow transition-colors">Villa Cisse Scholar</a>')
                 .replace(/NCSA's Center for AI Innovation/g, '<a href="https://www.ncsa.illinois.edu/" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-glow transition-colors">NCSA\'s Center for AI Innovation</a>')
-                .replace(/ClearAF/g, '<a href="#projects" class="text-primary hover:text-primary-glow transition-colors">ClearAF</a>')
-                .replace(/terpene synthase enzymes/g, '<a href="https://en.wikipedia.org/wiki/Terpene_synthase" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-glow transition-colors">terpene synthase enzymes</a>');
+                .replace(/Athen\.ai/g, '<a href="#projects" class="text-primary hover:text-primary-glow transition-colors">Athen.ai</a>')
+                .replace(/ClearAF/g, '<a href="#projects" class="text-primary hover:text-primary-glow transition-colors">ClearAF</a>');
               
               return (
                 <p 
