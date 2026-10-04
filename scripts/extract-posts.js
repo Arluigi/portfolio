@@ -1,7 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 
-const sqlPath = path.join(process.cwd(), 'i2229562_wp2.sql');
+// Usage: WP_SQL=<path to dump> HIDDEN_POSTS_FILE=<path to list> node scripts/extract-posts.js (both kept outside this repo)
+const sqlPath = process.env.WP_SQL || path.join(process.cwd(), 'i2229562_wp2.sql');
 const outputPath = path.join(process.cwd(), 'src/lib/old-posts.json');
 
 try {
@@ -10,12 +11,21 @@ try {
 
     console.log('Finding wp_posts insert...');
     const insertStartMarker = "INSERT INTO `wp_posts`";
-    const insertStartIndex = sqlContent.indexOf(insertStartMarker);
+    // Published posts kept off the site: one slug per line, in a file outside this public repo.
+    if (!process.env.HIDDEN_POSTS_FILE || !fs.existsSync(process.env.HIDDEN_POSTS_FILE)) {
+        throw new Error('Set HIDDEN_POSTS_FILE to the hidden-posts list (kept outside this repo). Refusing to run without it.');
+    }
+    const HIDDEN_SLUGS = new Set(fs.readFileSync(process.env.HIDDEN_POSTS_FILE, 'utf8').split('\n').map((l) => l.trim()).filter(Boolean));
+    const posts = [];
+    let insertStartIndex = sqlContent.indexOf(insertStartMarker);
 
     if (insertStartIndex === -1) {
         throw new Error('Could not find INSERT INTO `wp_posts`');
     }
 
+    // mysqldump splits big tables across many INSERT statements (this dump has 14).
+    // Read every one, not just the first.
+    for (; insertStartIndex !== -1; insertStartIndex = sqlContent.indexOf(insertStartMarker, insertStartIndex + 1)) {
     // Find the start of the values
     const valuesStartIndex = sqlContent.indexOf('VALUES', insertStartIndex);
     if (valuesStartIndex === -1) {
@@ -23,7 +33,6 @@ try {
     }
 
     let currentIndex = valuesStartIndex + 6; // Skip 'VALUES'
-    const posts = [];
 
     // Parsing state machine
     while (currentIndex < sqlContent.length) {
@@ -102,16 +111,19 @@ try {
             const post_type = unquote(values[20]);
             const post_status = unquote(values[7]);
 
-            if (post_type === 'post' && post_status === 'publish') {
+            if (post_type === 'post' && post_status === 'publish' && !HIDDEN_SLUGS.has(unquote(values[11]))) {
                 posts.push({
                     id: values[0],
                     title: unquote(values[5]),
                     date: unquote(values[2]),
                     slug: unquote(values[11]),
-                    content: unquote(values[4])
+                    // Strip images that point at private mail attachments (they never load publicly).
+                    content: unquote(values[4]).replace(/<img[^>]*mail\.google\.com[^>]*>/g, '')
                 });
             }
         }
+    }
+
     }
 
     console.log(`Found ${posts.length} published posts.`);

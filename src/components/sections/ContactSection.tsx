@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { portfolioData } from '@/lib/portfolio-data';
 
 export const ContactSection = () => {
@@ -30,6 +31,14 @@ export const ContactSection = () => {
             Say Hello
           </a>
         </div>
+
+        {/* Quiet link to the archived kid blog */}
+        <p className="mt-16 text-sm font-mono text-muted-foreground fade-in-up" style={{ animationDelay: '0.4s' }}>
+          Psst: I've been blogging since 2014.{' '}
+          <Link to="/old" className="text-primary hover:underline">
+            Read the old blog &rarr;
+          </Link>
+        </p>
       </div>
     </section>
   );

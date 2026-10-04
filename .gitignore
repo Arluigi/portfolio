@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Old WordPress backup lives in ~/Archive/aryansachdev-wordpress (never commit it)
+aryansachdev.com/
+*.sql
+public/wp-content/

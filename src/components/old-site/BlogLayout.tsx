@@ -5,13 +5,18 @@ export const BlogLayout = () => {
     return (
         <div className="min-h-screen bg-[#f4f4f4] text-gray-800 font-serif">
             <header className="bg-white border-b border-gray-200 py-8 mb-8">
-                <div className="container mx-auto px-4 max-w-4xl text-center">
+                <div className="container mx-auto px-4 max-w-4xl">
+                    <Link to="/" className="font-sans text-sm text-gray-500 hover:text-blue-600 transition-colors">
+                        &larr; Back to aryansach.dev
+                    </Link>
+                </div>
+                <div className="container mx-auto px-4 max-w-4xl text-center mt-4">
                     <h1 className="text-4xl font-bold mb-2">
-                        <Link to="/" className="hover:text-blue-600 transition-colors">
+                        <Link to="/old" className="hover:text-blue-600 transition-colors">
                             My Thoughts on Life and Minecraft
                         </Link>
                     </h1>
-                    <p className="text-gray-500 italic">A blast from the past (2016-2019)</p>
+                    <p className="text-gray-500 italic">A blast from the past (2014-2024)</p>
                 </div>
             </header>
 
@@ -23,9 +28,9 @@ export const BlogLayout = () => {
                 <div className="container mx-auto px-4 text-center text-gray-500 text-sm">
                     <p>© {new Date().getFullYear()} Aryan Sachdev. Archived content.</p>
                     <p className="mt-2">
-                        <a href="https://aryansach.dev" className="text-blue-600 hover:underline">
+                        <Link to="/" className="text-blue-600 hover:underline">
                             Visit my current portfolio &rarr;
-                        </a>
+                        </Link>
                     </p>
                 </div>
             </footer>

@@ -36,7 +36,7 @@ export interface Social {
 export const portfolioData = {
   // Personal Information
   name: "Aryan Sachdev",
-  title: "AI Engineer & Molecular Biology Researcher",
+  title: "Molecular Biology Researcher · Pre-med · AI for Healthcare",
   email: "aryanss2@illinois.edu",
   location: "Champaign, IL",
   
@@ -44,17 +44,18 @@ export const portfolioData = {
   hero: {
     greeting: "Hi, my name is",
     name: "Aryan Sachdev.",
-    tagline: "I build AI solutions at the intersection of biology and technology.",
-    description: "I'm a molecular biology student and AI engineer passionate about leveraging cutting-edge technology to solve complex problems in healthcare and research. Currently pursuing my BS at UIUC while developing AI-powered tools for biotech and education.",
+    tagline: "I study how breast cancer cells survive low oxygen, and I build AI tools for healthcare.",
+    description: "I'm a Molecular and Cellular Biology junior at UIUC, heading toward medicine. In the Prasanth Lab I build the RNA-seq pipeline that picks our candidate genes, then test them at the bench. Outside the lab I build software with physicians.",
     resumeUrl: "/resume.pdf"
   },
 
   // About Section
   about: {
     description: [
-      "Hello! I'm Aryan, a Molecular & Cellular Biology student at the University of Illinois who loves building at the intersection of biology, AI, and healthcare. My journey started back in 2018 when I co-founded CodifyKids, teaching coding to middle and high school students while donating the proceeds to charity.",
-      "Since then I've split my time between the wet lab and the codebase. I currently do research in the K.V. Prasanth Lab, validating RNA biology and gene regulation under cellular stress in breast cancer models — work that feeds into collaborations including with the National Cancer Institute. I was recently named a Villa Cisse Scholar, supporting an immersive summer of quantitative biophysics research.",
-      "On the building side, I've developed AI tools at NCSA's Center for AI Innovation and Discovery Partners Institute. These days I'm focused on Athen.ai, a platform that helps clinics adopt AI tools safely, and ClearAF, an AI-powered telehealth platform for dermatology.",
+      "Hello! I'm Aryan, a Molecular & Cellular Biology student at the University of Illinois, heading toward medicine. I started building early: in 2018 I co-founded CodifyKids, running coding camps for kids and donating the proceeds to charity.",
+      "Most of my time now goes to the K.V. Prasanth Lab, where I study how breast cancer cells adapt to low oxygen. I built the RNA-seq pipeline that nominates our candidate genes and I run the RT-qPCR that tests them. Our corrected CRISPRi library went to collaborators at the National Cancer Institute. This past summer I was one of five Villa Cisse Scholars, and I co-authored a meta-analysis on preventing radiation dermatitis in breast cancer patients (in revision).",
+      "I also volunteer at The EYE Center in Champaign, running patient pre-exams on equipment like OCT and retinal imaging. It's my first regular, hands-on work with patients.",
+      "On the building side, I've built AI tools at NCSA and Discovery Partners Institute, co-founded Athen.ai with an Emory physician, and I'm now building ClearAF, a dermatology telehealth platform, with a practicing dermatologist. When I'm not doing any of that, I captain UIUC's club tennis team, which finished fifth at nationals.",
       "Here are a few technologies I've been working with recently:"
     ],
     technologies: {
@@ -94,9 +95,32 @@ export const portfolioData = {
       highlight: {
         label: "Villa Cisse Scholarship · Summer 2026",
         title: "Villa Cisse Scholar",
-        description: "Selected as one of four Villa Cisse Scholars — a competitive 10-week program providing intensive training in quantitative biophysics and mentoring — funding an immersive summer research experience in the lab.",
+        description: "One of five Villa Cisse Scholars selected for a competitive, NSF-funded 10-week program in quantitative biophysics, which funded a full-time summer of research in the lab.",
         url: "https://qcb.illinois.edu/"
       }
+    },
+    {
+      company: "The EYE Center",
+      position: "Clinical Technician Volunteer",
+      duration: "Aug 2026 — Present",
+      location: "Champaign, IL",
+      description: [
+        "Run patient pre-exams before physician visits at an ophthalmology practice treating cataracts, diabetic eye disease and retinal conditions",
+        "Take patient histories and operate OCT, retinal imaging, refraction and keratometry, and IOLMaster and ultrasound biometry"
+      ],
+      technologies: ["OCT", "Retinal imaging", "Biometry", "Patient care"],
+      url: "https://www.2020eyecenter.com/"
+    },
+    {
+      company: "IronStreet Advisors",
+      position: "Consultant",
+      duration: "Sep 2026 — Present",
+      location: "Remote",
+      description: [
+        "Build web and social media presence for a healthtech advisory firm serving digital health, MedTech and AI-enabled care companies"
+      ],
+      technologies: ["Healthtech", "Web", "Social media"],
+      url: "https://ironstreetadvisors.com/"
     },
     {
       company: "Center for AI Innovation (NCSA)",
@@ -104,7 +128,7 @@ export const portfolioData = {
       duration: "May 2025 — Oct 2025",
       location: "University of Illinois",
       description: [
-        "Developed uiuc.chat, an AI-powered course assistant integrated with Canvas LMS for real-time, course-specific support",
+        "Built the Canvas course assistant for Illinois Chat (uiuc.chat), the campus AI assistant that won first place for innovative tools at Instructure's Academic Excellence Awards",
         "Designed and optimized NLP tools to improve user interaction and knowledge retrieval",
         "Built scalable solutions to enhance educational experiences across the university"
       ],
@@ -113,12 +137,12 @@ export const portfolioData = {
     },
     {
       company: "Cannabis Research Institute",
-      position: "Molecular Biology Research Intern",
+      position: "Research Assistant",
       duration: "Jun 2025 — Aug 2025",
       location: "Chicago, IL",
       description: [
         "Performed molecular biology techniques including DNA/RNA precipitation, RT-qPCR viral detection and genotyping",
-        "Analyzed experimental data and contributed to protocol optimization for cutting-edge cannabis research",
+        "Detected Hop Latent Viroid, an RNA pathogen that cuts crop yield, across extraction, reverse transcription and RT-qPCR",
         "Conducted protein structure prediction and functional analysis of terpene synthase enzymes using AlphaFold, Rosetta, and PyMol"
       ],
       technologies: ["RT-qPCR", "AlphaFold", "PyMol", "Rosetta", "RNA extraction"],
@@ -126,8 +150,8 @@ export const portfolioData = {
     },
     {
       company: "Discovery Partners Institute",
-      position: "AI Engineer",
-      duration: "May 2024 — Oct 2024",
+      position: "Research Intern, then AI Engineer",
+      duration: "Jun 2024 — Oct 2024",
       location: "Chicago, IL",
       description: [
         "Built an LLM-powered tool for researcher and grant discovery by topic area",
@@ -139,11 +163,11 @@ export const portfolioData = {
     },
     {
       company: "Outlier.ai",
-      position: "AI Prompt Engineer",
-      duration: "Apr 2024 — May 2025",
+      position: "AI Model Trainer",
+      duration: "Mar 2024 — May 2025",
       location: "Remote",
       description: [
-        "Enhanced LLM performance through advanced prompt engineering and quality control",
+        "Graded and rewrote model answers to biology, chemistry and math problems for RLHF training",
         "Generated and evaluated training data to fine-tune model responses across various domains",
         "Contributed to improving AI model accuracy and reliability through systematic testing and feedback"
       ],
@@ -157,8 +181,7 @@ export const portfolioData = {
       location: "Remote",
       description: [
         "Built an AI chatbot to engage visitors and promote complete protein innovations",
-        "Automated and managed Instagram/Twitter content with AI-driven campaigns",
-        "Increased social media engagement by 40% through intelligent content optimization"
+        "Automated and managed Instagram/Twitter content with AI-driven campaigns"
       ],
       technologies: ["React", "Node.js", "OpenAI API", "Social Media APIs", "MongoDB"],
       url: "https://equii.com/"
@@ -171,7 +194,7 @@ export const portfolioData = {
       description: [
         "Organized and taught coding camps for middle and high school students",
         "Developed curriculum covering Python, JavaScript, and web development fundamentals",
-        "Donated all profits to local charities, raising over $10,000 for community organizations"
+        "Donated all profits to Feeding Our Kids, a local charity"
       ],
       technologies: ["Python", "JavaScript", "Scratch", "Education"],
       url: ""
@@ -191,7 +214,7 @@ export const portfolioData = {
     },
     {
       title: "ClearAF",
-      description: "Comprehensive telehealth platform connecting patients and dermatologists, centered around AI-powered skin analysis. Features personalized prescription plans based on individual skin conditions and treatment history, leveraging computer vision and LLMs for accurate diagnosis support.",
+      description: "Telehealth platform I'm building with a practicing dermatologist. Patients photograph their skin, and the platform pairs AI skin analysis with their treatment history so the dermatologist can write a personalized prescription plan. After testing showed weaker performance on darker skin, we expanded testing and training data so every skin tone is represented.",
       technologies: ["Next.js", "Python", "TensorFlow", "PostgreSQL", "Stripe API"],
       github: "",
       external: "",
